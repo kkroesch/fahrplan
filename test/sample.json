@@ -1,0 +1,482 @@
+{
+  "connections": [
+    {
+      "from": {
+        "station": {
+          "id": "8503000",
+          "name": "Z\u00fcrich HB",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 47.378177,
+            "y": 8.540193
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2016-11-03T14:55:00+0100",
+        "departureTimestamp": 1478181300,
+        "delay": null,
+        "platform": "18",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": 1,
+          "capacity2nd": 1
+        },
+        "realtimeAvailability": "RT_BHF",
+        "location": {
+          "id": "8503000",
+          "name": "Z\u00fcrich HB",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 47.378177,
+            "y": 8.540193
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8502110",
+          "name": "Dulliken",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 47.354266,
+            "y": 7.946491
+          },
+          "distance": null
+        },
+        "arrival": "2016-11-03T15:38:00+0100",
+        "arrivalTimestamp": 1478183880,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "2",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": "RT_BHF",
+        "location": {
+          "id": "8502110",
+          "name": "Dulliken",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 47.354266,
+            "y": 7.946491
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d00:43:00",
+      "transfers": 1,
+      "service": {
+        "regular": null,
+        "irregular": "3. Nov until 10. Dec 2016 daily"
+      },
+      "products": [
+        "IR",
+        "RE"
+      ],
+      "capacity1st": 1,
+      "capacity2nd": 1,
+      "sections": [
+        {
+          "journey": {
+            "name": "IR 2374",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": 2,
+            "number": "2374",
+            "operator": "SBB",
+            "to": "Bern",
+            "passList": [
+              {
+                "station": {
+                  "id": "8503000",
+                  "name": "Z\u00fcrich HB",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.378177,
+                    "y": 8.540193
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2016-11-03T14:55:00+0100",
+                "departureTimestamp": 1478181300,
+                "delay": null,
+                "platform": "",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": 1,
+                  "capacity2nd": 1
+                },
+                "realtimeAvailability": "RT_BHF",
+                "location": {
+                  "id": "8503000",
+                  "name": "Z\u00fcrich HB",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.378177,
+                    "y": 8.540193
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8500218",
+                  "name": "Olten",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.351929,
+                    "y": 7.907685
+                  },
+                  "distance": null
+                },
+                "arrival": "2016-11-03T15:26:00+0100",
+                "arrivalTimestamp": 1478183160,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": "RT_BHF",
+                "location": {
+                  "id": "8500218",
+                  "name": "Olten",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.351929,
+                    "y": 7.907685
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": 1,
+            "capacity2nd": 1
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8503000",
+              "name": "Z\u00fcrich HB",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.378177,
+                "y": 8.540193
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2016-11-03T14:55:00+0100",
+            "departureTimestamp": 1478181300,
+            "delay": null,
+            "platform": "18",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": 1,
+              "capacity2nd": 1
+            },
+            "realtimeAvailability": "RT_BHF",
+            "location": {
+              "id": "8503000",
+              "name": "Z\u00fcrich HB",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.378177,
+                "y": 8.540193
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8500218",
+              "name": "Olten",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.351929,
+                "y": 7.907685
+              },
+              "distance": null
+            },
+            "arrival": "2016-11-03T15:26:00+0100",
+            "arrivalTimestamp": 1478183160,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "9",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": "RT_BHF",
+            "location": {
+              "id": "8500218",
+              "name": "Olten",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.351929,
+                "y": 7.907685
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "RE 4777",
+            "category": "RE",
+            "subcategory": null,
+            "categoryCode": 3,
+            "number": "4777",
+            "operator": "SBB",
+            "to": "Wettingen",
+            "passList": [
+              {
+                "station": {
+                  "id": "8500218",
+                  "name": "Olten",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.351929,
+                    "y": 7.907685
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2016-11-03T15:35:00+0100",
+                "departureTimestamp": 1478183700,
+                "delay": null,
+                "platform": "",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": 1,
+                  "capacity2nd": 1
+                },
+                "realtimeAvailability": "RT_BHF",
+                "location": {
+                  "id": "8500218",
+                  "name": "Olten",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.351929,
+                    "y": 7.907685
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8502110",
+                  "name": "Dulliken",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.354266,
+                    "y": 7.946491
+                  },
+                  "distance": null
+                },
+                "arrival": "2016-11-03T15:38:00+0100",
+                "arrivalTimestamp": 1478183880,
+                "departure": "2016-11-03T15:38:00+0100",
+                "departureTimestamp": 1478183880,
+                "delay": null,
+                "platform": "",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": "RT_BHF",
+                "location": {
+                  "id": "8502110",
+                  "name": "Dulliken",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 47.354266,
+                    "y": 7.946491
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": 1,
+            "capacity2nd": 1
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8500218",
+              "name": "Olten",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.351929,
+                "y": 7.907685
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2016-11-03T15:35:00+0100",
+            "departureTimestamp": 1478183700,
+            "delay": null,
+            "platform": "4",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": 1,
+              "capacity2nd": 1
+            },
+            "realtimeAvailability": "RT_BHF",
+            "location": {
+              "id": "8500218",
+              "name": "Olten",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.351929,
+                "y": 7.907685
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8502110",
+              "name": "Dulliken",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.354266,
+                "y": 7.946491
+              },
+              "distance": null
+            },
+            "arrival": "2016-11-03T15:38:00+0100",
+            "arrivalTimestamp": 1478183880,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "2",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": "RT_BHF",
+            "location": {
+              "id": "8502110",
+              "name": "Dulliken",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 47.354266,
+                "y": 7.946491
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "from": {
+    "id": "008503000",
+    "name": "Z\u00fcrich HB",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 47.378177,
+      "y": 8.540193
+    },
+    "distance": null
+  },
+  "to": {
+    "id": "008502110",
+    "name": "Dulliken",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 47.354266,
+      "y": 7.946491
+    },
+    "distance": null
+  },
+  "stations": {
+    "from": [
+      {
+        "id": "008503000",
+        "name": "Z\u00fcrich HB",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 47.378177,
+          "y": 8.540193
+        },
+        "distance": null
+      }
+    ],
+    "to": [
+      {
+        "id": "008502110",
+        "name": "Dulliken",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 47.354266,
+          "y": 7.946491
+        },
+        "distance": null
+      }
+    ]
+  }
+}
