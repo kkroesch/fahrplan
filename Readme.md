@@ -6,13 +6,20 @@ CLI interface for searching train connections using SBB's OpenData API.
 Getting Started
 ---------------
 
-Install requirements and invoke script
+Install requirements and invoke script:
 
 		pyvenv env
 		source env/bin/activate
 		pip install -r requirements.txt
-		./sbb.py -h
+		./sbb.py DEPARTURE-ID DESTINATION-ID
 
+Find station IDs by entering the first few letters of the station's name
+
+		./stations.py Dull
+
+Sample Output:
+
+![screenshot](https://raw.githubusercontent.com/kkroesch/sbb-api/master/doc/screenshot.png)
 
 Testing
 -------
