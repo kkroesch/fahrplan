@@ -1,7 +1,7 @@
 SBB API Client
 ==============
 
-CLI interface for searching train connections using SBB's OpenData API.
+CLI interface for searching train connections using [SBB's OpenData API](http://sbb.xiala.net/).
 
 Getting Started
 ---------------
