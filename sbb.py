@@ -11,7 +11,7 @@ import datetime
 import dateutil.parser
 import requests
 
-from ansi import Colors
+from util import Colors
 
 
 def reformat_time(timestring):
