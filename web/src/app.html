@@ -1,0 +1,18 @@
+
+<template>
+  <h1>${heading}</h1>
+
+  <form submit.trigger="addBookmark()">
+    VON <input type="text" value.bind="startStation"> NACH <input type="text" value.bind="destinationStation">
+    <button type="submit">Bookmark</button>
+  </form>
+
+  <ul>
+    <li repeat.for="bookmark of bookmarks">
+      <span>
+        ${bookmark.start} -&gt; ${bookmark.destination}
+      </span>
+      <button click.trigger="nextConnection(bookmark)">Next Connection</button>
+    </li>    
+  </ul>
+</template>
