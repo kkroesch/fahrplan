@@ -13,10 +13,14 @@ export class App {
     }
   }
 
-  removeTodo(todo) {
-    let index = this.todos.indexOf(todo);
+  removeBookmark(bookmark) {
+    let index = this.bookmarks.indexOf(bookmark);
     if (index !== -1) {
-      this.todos.splice(index, 1);
+      this.bookmarks.splice(index, 1);
     }
+  }
+
+  nextConnection() {
+    console.log("Triggered")
   }
 }
