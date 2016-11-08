@@ -115,6 +115,7 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
+          "jquery",
           {
             "name": "text",
             "path": "../scripts/text"

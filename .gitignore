@@ -88,5 +88,6 @@ ENV/
 .idea
 
 web2/scripts/app-bundle.js
-web2/scripts/app-bundle.js.map
 web2/scripts/vendor-bundle.js
+
+*.js.map

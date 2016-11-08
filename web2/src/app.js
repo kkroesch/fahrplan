@@ -1,4 +1,5 @@
 import {Bookmark} from './bookmark';
+import $ from 'jquery';
 
 export class App {
   constructor() {
@@ -25,6 +26,8 @@ export class App {
   }
 
   nextConnection() {
-
+  	$.get('package.json', data => {
+  		console.log(data);
+  	})
   }
 }
