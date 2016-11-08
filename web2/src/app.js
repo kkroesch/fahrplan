@@ -1,4 +1,3 @@
-    
 import {Bookmark} from './bookmark';
 
 export class App {
@@ -20,7 +19,12 @@ export class App {
     }
   }
 
+  swapDirections() {
+  	[this.startStation, this.destinationStation] = [this.destinationStation, this.startStation]
+
+  }
+
   nextConnection() {
-    console.log("Triggered")
+
   }
 }

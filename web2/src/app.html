@@ -11,7 +11,8 @@
       <label>Nach</label>
       <input type="text" class="form-control" value.bind="destinationStation">
     </div>
-    <button class="btn btn-default" type="submit">Bookmark</button>
+    <button class="btn btn-default" click.trigger="swapDirections()"><i class="fa fa-exchange" aria-hidden="true"></i> Gegenrichtung</button>
+    <button class="btn btn-default" type="submit"><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmark</button>
   </form>
 
   <p></p>
