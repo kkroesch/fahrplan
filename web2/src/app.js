@@ -31,18 +31,18 @@ export class App {
   }
 
   nextConnection(bookmark) {
-  	bookmark.journey = '<ol>';
-  	$.get('http://transport.opendata.ch/v1/connections?from=008503000&to=008502110&limit=1', fahrplan => {
+  	bookmark.journey = [];
+  	var query = `http://transport.opendata.ch/v1/connections?from=${bookmark.start}&to=${bookmark.destination}&limit=1`;
+  	$.get(query, fahrplan => {
   		for (var connection of fahrplan.connections) {
   			for (var section of connection.sections) {
   				if (section.journey == null) continue;
-  				bookmark.journey += `<li>Mit ${section.journey.name} ` +
+  				bookmark.journey.push(`Mit ${section.journey.name} ` +
   					`von ${section.departure.station.name} ` + 
   					`um ${reformatTime(section.departure.departure)} ` +
-  					`nach ${section.journey.to} (${section.arrival.station.name} an: ${reformatTime(section.arrival.arrival)})</li>`;
+  					`nach ${section.journey.to} (${section.arrival.station.name} an: ${reformatTime(section.arrival.arrival)})`);
   			}
   		}
-  		bookmark.journey += '</ol>';
   	})
   }
 }
