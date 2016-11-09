@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Generated web artefacts
+node_modules
+
 # Distribution / packaging
 .Python
 env/
@@ -83,3 +86,8 @@ venv/
 ENV/
 
 .idea
+
+web2/scripts/app-bundle.js
+web2/scripts/vendor-bundle.js
+
+*.js.map
