@@ -7,6 +7,11 @@
     "url": "???"
   },
   "license": "MIT",
+  "scripts": {
+    "start": "au run -w",
+    "build": "au build --env prod",
+    "deploy": "rsync -e ssh -avuzb index.html scripts stylesheets web2.kroesch.ch:/var/www/html/fahrplan/"
+  },
   "dependencies": {
     "aurelia-animator-css": "^1.0.0",
     "aurelia-bootstrapper": "^1.0.0",
