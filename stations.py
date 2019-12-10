@@ -13,7 +13,8 @@ icons = {
 	"train": "",
 	"bus": "ﲞ",
 	"tram": "館",
-	None: "",
+	"pedestrian": "",
+	None: "ﴤ",
 }
 
 parser = argparse.ArgumentParser()
