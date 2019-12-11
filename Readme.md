@@ -11,11 +11,11 @@ Install requirements and invoke script:
 		pyvenv env
 		source env/bin/activate
 		pip install -r requirements.txt
-		./sbb.py DEPARTURE-ID DESTINATION-ID
+		./sbb.py conn DEPARTURE-ID DESTINATION-ID
 
 Find station IDs by entering the first few letters of the station's name
 
-		./stations.py Dull
+		./sbb.py id Dull
 
 Sample Output:
 
