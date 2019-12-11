@@ -2,14 +2,26 @@
 
 # -*- coding: utf-8 -*-
 
-""" Summarizes the next SBB connection between two stations using SBB OpenData API.
+""" Searches for station IDs using SBB OpenData API.
 """
 
 import json
 import argparse
-import datetime
-import dateutil.parser
 import requests
+import dateutil.parser
+
+icons = {
+    "train": "",
+    "bus": "ﲞ",
+    "tram": "館",
+    "pedestrian": "",
+    None: "ﴤ",
+}
+
+def reformat_time(timestring):
+    """ Format time from ISO datetime string. """
+    return dateutil.parser.parse(timestring).strftime('%H:%M')
+
 
 class Colors:
     """ Colors for console putput as ANSI code.
@@ -28,34 +40,64 @@ class Colors:
     ENDC = '\033[0m'
 
 
-def reformat_time(timestring):
-	""" Format time from ISO datetime string. """
-	return dateutil.parser.parse(timestring).strftime('%H:%M')
+class FindAction(argparse.Action):
+    """
+        Find a station ID for given (partial) name.
+    """
+    def __init__(self, option_strings, dest, nargs=None, **kwargs):
+        if nargs is not None:
+            raise ValueError("nargs not allowed")
+        super(FindAction, self).__init__(option_strings, dest, **kwargs)
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        req = requests.get('http://transport.opendata.ch/v1/locations?query=' + values)
+        station_list = req.json()
+
+        for station in station_list['stations']:
+            station['id'] = (station['id'] or "-"*7)
+            print(f"{icons[station['icon']]} {station['id']}  {station['name']}")
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-v', '--verbose', help="Increase output verbosity.", action="store_true")
-parser.add_argument('depart', help="Departure station")
-parser.add_argument('dest', help="Destination station")
-parser.add_argument('-w', '--when', help="Departure time (defaults to now).")
-arguments = parser.parse_args()
+class ConnectAction(argparse.Action):
+    """
+        Retrieves the connection for two given station IDs.
+    """
+    def __init__(self, option_strings, dest, nargs='+', **kwargs):
+        super(ConnectAction, self).__init__(option_strings, dest, nargs, **kwargs)
 
-req = requests.get('http://transport.opendata.ch/v1/connections?from={}&to={}&limit=1'.format(arguments.depart, arguments.dest))
-fahrplan = req.json()
+    def __call__(self, parser, namespace, values, option_string=None):
+        req = requests.get('http://transport.opendata.ch/v1/connections?from={}&to={}&limit=1'.format(values[0], values[1]))
+        fahrplan = req.json()
 
-for conn in fahrplan['connections']:
-	title = "Von {} Nach {}".format(conn['from']['station']['name'], conn['to']['station']['name'])
-	print(Colors.BOLD.format(title))
+        for conn in fahrplan['connections']:
+            title = "Von {} Nach {}".format(conn['from']['station']['name'], conn['to']['station']['name'])
+            print(Colors.BOLD.format(title))
 
-	for section in conn['sections']:
-		if section['journey'] is None:
-			continue
+            for section in conn['sections']:
+                if section['journey'] is None:
+                    continue
 
-		print("Mit {} von {} um {} nach {} ({} an: {}).".format(
-			Colors.ERROR.format(section['journey']['name']), 
-			section['departure']['station']['name'], 
-			reformat_time(section['departure']['departure']), 
-			section['journey']['to'],
-			section['arrival']['station']['name'],
-			reformat_time(section['arrival']['arrival']),
-		))
+                print("Mit {} von {} um {} nach {} ({} an: {}).".format(
+                    Colors.ERROR.format(section['journey']['name']), 
+                    section['departure']['station']['name'], 
+                    reformat_time(section['departure']['departure']), 
+                    section['journey']['to'],
+                    section['arrival']['station']['name'],
+                    reformat_time(section['arrival']['arrival']),
+                ))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Retrieve SBB connections.')
+    parser.add_argument('-v', '--verbose', 
+            help="Increase output verbosity.", action="store_true")
+
+    subparsers = parser.add_subparsers(title='sub-commands')
+    parser_find = subparsers.add_parser('id', help='Find station ID for (partial) name.')
+    parser_find.add_argument('part', type=str, action=FindAction, help='A station name.')
+
+    parser_connect = subparsers.add_parser('conn', help='Find connection between two station IDs.')
+    parser_connect.add_argument('stations', action=ConnectAction, nargs='+', help="Waypoints")
+    parser_connect.add_argument('-w', '--when', help="Departure time (defaults to now).")
+
+    arguments = parser.parse_args()
